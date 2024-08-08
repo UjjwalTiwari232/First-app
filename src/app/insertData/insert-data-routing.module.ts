@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { InsertDataComponent } from './insert-data.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/customers/null'},
-  { path: '**', pathMatch: 'full', redirectTo: '/customers/null' } 
+  { path:'addCustomer',component:InsertDataComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class InsertDataRoutingModule { }
