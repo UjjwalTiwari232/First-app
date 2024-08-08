@@ -33,20 +33,12 @@ export class InsertDataComponent implements OnInit {
       orderTotal:this.order,
       customerSince:null
     }
-
     this.people.push(newCustomer);
-    //
-    // Serialize the entire people array to JSON
-    const serializedList = JSON.stringify(this.people);
-
-    // Encode the serialized JSON string
-    const encodedList = encodeURIComponent(serializedList);
-    console.log(encodedList)
-    // const serializedList = JSON.stringify(serializedList1); // Serialize only IDs
-    this.router.navigate(['/customers',encodedList]);
+    localStorage.setItem("customers",JSON.stringify(this.people));
+    this.router.navigate(['/customers']);
 
   }
-  // Function to generate a unique ID
+
   private generateUniqueId(): number {
     return this.people.length > 0 ? Math.max(...this.people.map(c => c.id)) + 1 : 1;
 }

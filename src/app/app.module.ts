@@ -9,10 +9,12 @@ import { SharedModule } from './shared/shared.module';
 import { OrdersModule } from './orders/orders.module';
 import { InsertDataModule } from './insertData/insert-data.module';
 import { FormsModule } from '@angular/forms';
+import { DeleteDataComponent } from './delete-data/delete-data.component';
+import { DeleteDataModule } from './delete-data/delete-data.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     CoreModule,
     CustomerModule,
     InsertDataModule,
+    DeleteDataModule,
     OrdersModule,
     AppRoutingModule,
     FormsModule

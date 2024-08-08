@@ -23,6 +23,9 @@
         <td>
             {{ customersOrderTotal | currency:currencyCode:'symbol' }}
         </td>
+        <td>
+            <app-delete-data></app-delete-data>
+        </td>
     </tr>
     <tr *ngIf="!filteredCustomers || !filteredCustomers.length">
         <td colspan="4">No customers found</td>
